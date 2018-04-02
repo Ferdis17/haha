@@ -4,6 +4,8 @@ import java.math.BigDecimal;
 
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 
@@ -16,6 +18,8 @@ import org.springframework.web.multipart.MultipartFile;
 @XmlRootElement
 public class Product {
 	
+	@Id
+	@GeneratedValue
 	private String productId;
     private String name;
     private BigDecimal unitPrice;
